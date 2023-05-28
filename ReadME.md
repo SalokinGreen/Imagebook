@@ -1,2 +1,3 @@
 Welcome to the imagebook, a [NovelAI](https://novelai.net/) tampermonkey extension that allows you to add images to your lorebook entries. Not the prettiest, but it works.
-[![Demo CountPages alpha](https://im4.ezgif.com/tmp/ezgif-4-8fa71aba96.gif)](https://i.imgur.com/XErEDP5.mp4)
+
+![ezgif com-video-to-gif](https://github.com/SalokinGreen/Imagebook/assets/50830205/0b534c7e-4ea3-4063-a3bd-8f2109b004cb)
