@@ -19,3 +19,6 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 - The extension only works on a specific story, so if you copy or import a story, its imagebook entries will not be copied or imported.
 - Deleting an entry will not delete its image, and deleting the story will not delete its imagebook entries.
 - Not enough testing to make sure there are no bugs.
+
+# Gallery
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/178ae758-27ad-4eab-9d20-1945fa94d2be)
