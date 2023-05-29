@@ -179,7 +179,7 @@
       saveButton.innerText = "Change Image";
       saveButton.classList.add("save-button");
       saveButton.style.cursor = "pointer";
-      titleSection.appendChild(saveButton);
+      // titleSection.appendChild(saveButton);
 
       // add event listener to save button
       saveButton.addEventListener("click", () => {
@@ -222,6 +222,7 @@
       deleteLibraryButton.innerText = "Delete Library";
       deleteLibraryButton.classList.add("delete-library-button");
       deleteLibraryButton.style.cursor = "pointer";
+      buttonArea.appendChild(saveButton);
       buttonArea.appendChild(deleteLibraryButton);
 
       // add button area to management area
