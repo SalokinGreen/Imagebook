@@ -21,6 +21,8 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 - Not enough testing to make sure there are no bugs.
 
 # Gallery
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/178ae758-27ad-4eab-9d20-1945fa94d2be)
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/631f33c0-0715-4064-90c2-005984394c35)
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ea16bc27-ede9-486b-a8d9-45cbcb888496)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/923a42a2-cec1-470e-857a-14d2020cf0fe)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/a298fc84-9901-4ce6-89f0-6305cb7c36fd)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/dfa669d9-b044-4f48-8a9e-7dd5f712fbed)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ce3c5db6-ef6e-4074-9c15-bafbfcad5024)
+
