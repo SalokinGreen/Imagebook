@@ -11,7 +11,9 @@
 
 (function () {
   ("use strict");
-
+  // change this settings for your image size
+  const maxW = "30rem";
+  const maxH = "20rem";
   console.log("Imagebook loaded");
   let storyName = "";
   let oldLoreName = "";
@@ -81,7 +83,7 @@
       imageFrame.classList.add("image-frame");
       // image frame should be small, so it doesn't take up too much space
       imageFrame.style.width = "100%";
-      imageFrame.style.maxWidth = "20rem";
+      imageFrame.style.maxWidth = maxW;
       imageFrame.style.height = "auto";
       imageFrame.style.marginTop = "0.5rem";
       imageFrame.style.marginBottom = "0.5rem";
@@ -125,6 +127,7 @@
       image.classList.add("loreImage");
       image.alt = "Image description"; // replace with your image description
       image.style.maxWidth = "100%";
+      image.style.maxHeight = maxH;
 
       // append image to image frame
       imageFrame.appendChild(image);
