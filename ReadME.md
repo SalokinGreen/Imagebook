@@ -22,3 +22,5 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 
 # Gallery
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/178ae758-27ad-4eab-9d20-1945fa94d2be)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/631f33c0-0715-4064-90c2-005984394c35)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ea16bc27-ede9-486b-a8d9-45cbcb888496)
