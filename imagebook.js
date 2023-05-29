@@ -41,57 +41,40 @@
     loreName = document.querySelector(loreSelector);
     if (loreName != null) {
       loreName = loreName.value;
+      // check if image was already added and if .image-section doesn't exist
+      if (imageAdded && document.querySelector(".image-section") == null) {
+        // set imageAdded to false
+        imageAdded = false;
+      }
     } else {
       imageAdded = false;
     }
-    // get collapsed from local storage, if it exists
-    if (!imageAdded) {
-      collapse = localStorage.getItem("imagebook-collapse");
-      if (collapse === null) {
-        // if it doesn't exist, set it to false
-        collapse = false;
-        localStorage.setItem("imagebook-collapse", collapse);
-      }
-    }
+
     // check if local storage "imagebook" exists
     if (localStorage.getItem("imagebook") === null) {
       // create local storage "imagebook"
       localStorage.setItem("imagebook", JSON.stringify({}));
+      localStorage.setItem("imagebook-collapse", false);
     } else {
       // get local storage "imagebook"
       images = JSON.parse(localStorage.getItem("imagebook"));
+      collapse = localStorage.getItem("imagebook-collapse");
+      if (typeof collapse === "string") {
+        collapse = collapse === "true";
+      }
     }
     // check if image exists in local storage
     if (images[id] && images[id][loreName]) {
-      console.log("Image exists in local storage");
       imageLink = images[id][loreName];
-      console.log(imageLink);
     } else {
       // else use default image
-      console.log("Image does not exist in local storage");
       imageLink = ""; // replace with your image URL
     }
-    console.log(id);
     console.log(loreName);
-    // logic for image change
-    if (oldLoreName !== loreName) {
-      console.log("Lore name changed");
-      oldLoreName = loreName;
-      // check if '.loreImage' exists
-      if (document.querySelector(".loreImage") != null) {
-        // check if image exists
-        if (images[id] && images[id][loreName]) {
-          imageLink = images[id][loreName];
-          // replace image
-          document.querySelector(".loreImage").src = imageLink;
-        } else {
-          // replace image with default
-          document.querySelector(".loreImage").src = ""; // replace with your image URL
-        }
-      }
-    }
 
     if (!imageAdded) {
+      // get collapsed from local storage, if it exists
+
       // check if image was already added
       // create image frame
       const imageFrame = document.createElement("div");
@@ -138,6 +121,13 @@
       imageFrame.appendChild(image);
       // append image frame to image section
       imageSection.appendChild(imageFrame);
+      if (localStorage.getItem("imagebook-collapse") !== null) {
+        collapse = localStorage.getItem("imagebook-collapse");
+        if (typeof collapse === "string") {
+          collapse = collapse === "true";
+        }
+      }
+
       if (collapse) {
         // hide image
         imageFrame.style.display = "none";
@@ -161,18 +151,18 @@
         if (collapse) {
           // show image
           imageFrame.style.display = "block";
-
+          managementArea.style.display = "block";
           collapseButtonText.innerText = "Collapse";
           collapse = false;
         } else {
           // hide image
           imageFrame.style.display = "none";
-
+          managementArea.style.display = "none";
           collapseButtonText.innerText = "Expand";
           collapse = true;
         }
         // save collapse state
-        localStorage.setItem("collapse", collapse);
+        localStorage.setItem("imagebook-collapse", collapse);
       });
 
       // add save button
@@ -196,12 +186,58 @@
           image.src = imageUrl;
         }
       });
+
+      // create management area
+      const managementArea = document.createElement("div");
+      managementArea.classList.add("management-area");
+      if (collapse) {
+        // hide management area
+        managementArea.style.display = "none";
+      } else {
+        // show management area
+        managementArea.style.display = "block";
+      }
+      // add title to management area
+      const managementAreaTitle = document.createElement("h4");
+      managementAreaTitle.innerText = "Management";
+      managementAreaTitle.classList.add("management-title");
+      // add button area to management area
+      const buttonArea = document.createElement("div");
+      buttonArea.classList.add("button-area");
+      buttonArea.style.display = "flex";
+      buttonArea.style.flexDirection = "row";
+      buttonArea.style.gap = "1rem";
+
+      // create delete library button
+      const deleteLibraryButton = document.createElement("button");
+      deleteLibraryButton.innerText = "Delete Library";
+      deleteLibraryButton.classList.add("delete-library-button");
+      deleteLibraryButton.style.cursor = "pointer";
+      buttonArea.appendChild(deleteLibraryButton);
+
+      // add button area to management area
+      managementArea.appendChild(buttonArea);
+      // add management area to image section
+      imageSection.appendChild(managementArea);
+
+      // add event listener to delete library button
+      deleteLibraryButton.addEventListener("click", () => {
+        if (confirm("Are you sure you want to delete the library?")) {
+          // remove all images from story
+          delete images[id];
+          // save changes to local storage
+          localStorage.setItem("imagebook", JSON.stringify(images));
+          imageAdded = false;
+          // remove image section
+          imageSection.remove();
+        }
+      });
     }
+
     // add event listener toloreSelectorto change the image key
     if (document.querySelector(loreSelector) != null) {
       document.querySelector(loreSelector).addEventListener("input", () => {
         const newLoreName = document.querySelector(loreSelector).value;
-        console.log("INPUT CHANGE");
         // check if image of old lore name exists in local storage
         if (images[id] && images[id][loreName]) {
           // get image link
@@ -215,6 +251,22 @@
           localStorage.setItem("imagebook", JSON.stringify(images));
         }
       });
+    }
+    // logic for image change
+    if (oldLoreName !== loreName) {
+      // check if '.loreImage' exists
+      if (document.querySelector(".loreImage") != null) {
+        // check if image exists
+        if (images[id] && images[id][loreName]) {
+          imageLink = images[id][loreName];
+          // replace image
+          document.querySelector(".loreImage").src = imageLink;
+        } else {
+          // replace image with default
+          document.querySelector(".loreImage").src = ""; // replace with your image URL
+        }
+      }
+      oldLoreName = loreName;
     }
   });
   observer.observe(document.body, { childList: true, subtree: true });

@@ -15,3 +15,4 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 ## Known Issues
 
 - Naming an entry to the same name as an existing entry will overwrite the existing entry's image.
+- The extension depends on loose class names, so if NovelAI changes their class names, the extension will break. Make sure to check back here for updates.
