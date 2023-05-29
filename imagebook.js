@@ -78,7 +78,14 @@
       // check if image was already added
       // create image frame
       const imageFrame = document.createElement("div");
-      imageFrame.classList.add("sc-c2a8031b-34", "cbdOWq");
+      imageFrame.classList.add("image-frame");
+      // image frame should be small, so it doesn't take up too much space
+      imageFrame.style.width = "100%";
+      imageFrame.style.maxWidth = "20rem";
+      imageFrame.style.height = "auto";
+      imageFrame.style.marginTop = "0.5rem";
+      imageFrame.style.marginBottom = "0.5rem";
+
       // Greate image section
       const imageSection = document.createElement("div");
       imageSection.classList.add("image-section");
@@ -89,11 +96,13 @@
       titleSection.style.display = "flex";
       titleSection.style.flexDirection = "row";
       titleSection.style.gap = "1rem";
+      titleSection.style.alignItems = "flex-start";
       imageSection.appendChild(titleSection);
       // add title to image section
       const imageSectionTitle = document.createElement("h3");
       imageSectionTitle.innerText = "Image";
       imageSectionTitle.classList.add("image-title");
+      imageSectionTitle.style.cursor = "pointer";
       titleSection.appendChild(imageSectionTitle);
       // add collapse button
       const collapseButton = document.createElement("button");
@@ -106,7 +115,7 @@
 
       collapseButton.appendChild(collapseButtonText);
       // add collapse button to image section
-      titleSection.appendChild(collapseButton);
+      // titleSection.appendChild(collapseButton);
       // add image section to image frame
       // create image element
       const image = document.createElement("img");
@@ -115,7 +124,7 @@
       image.src = imageLink; // replace with your image URL
       image.classList.add("loreImage");
       image.alt = "Image description"; // replace with your image description
-      image.style.width = "100%";
+      image.style.maxWidth = "100%";
 
       // append image to image frame
       imageFrame.appendChild(image);
@@ -147,7 +156,7 @@
       }
 
       // add event listener to collapse button
-      collapseButton.addEventListener("click", () => {
+      imageSectionTitle.addEventListener("click", () => {
         if (collapse) {
           // show image
           imageFrame.style.display = "block";
