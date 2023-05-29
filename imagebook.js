@@ -89,7 +89,7 @@
       // Greate image section
       const imageSection = document.createElement("div");
       imageSection.classList.add("image-section");
-      imageSection.style.marginTop = "2rem";
+      // imageSection.style.marginTop = "2rem";
       // title section
       const titleSection = document.createElement("div");
       titleSection.classList.add("title-section");
