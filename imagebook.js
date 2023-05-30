@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Imagebook
 // @namespace    http://tampermonkey.net/
-// @version      1
+// @version      1.1
 // @description  bring images to your lorebook!
 // @author       SGreen
 // @match        https://novelai.net/*
@@ -334,7 +334,7 @@
             encodeURIComponent(JSON.stringify(images[id]))
         );
         // set the download attribute to the file name
-        element.setAttribute("download", "imagebook.json");
+        element.setAttribute("download", "name.imagebook");
         // simulate click on element
         element.style.display = "none";
         document.body.appendChild(element);
@@ -347,8 +347,8 @@
         const element = document.createElement("input");
         // set the type attribute to file
         element.setAttribute("type", "file");
-        // set the accept attribute to JSON files
-        element.setAttribute("accept", ".json");
+        // set the accept attribute to imagebook files
+        element.setAttribute("accept", ".imagebook");
         // simulate click on element
         element.style.display = "none";
         document.body.appendChild(element);
