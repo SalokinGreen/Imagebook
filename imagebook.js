@@ -227,6 +227,18 @@
       deleteLibraryButton.style.cursor = "pointer";
       buttonArea.appendChild(saveButton);
       buttonArea.appendChild(deleteLibraryButton);
+      // create export library button
+      const exportLibraryButton = document.createElement("button");
+      exportLibraryButton.innerText = "Export";
+      exportLibraryButton.classList.add("export-library-button");
+      exportLibraryButton.style.cursor = "pointer";
+      buttonArea.appendChild(exportLibraryButton);
+      // create import library button
+      const importLibraryButton = document.createElement("button");
+      importLibraryButton.innerText = "Import";
+      importLibraryButton.classList.add("import-library-button");
+      importLibraryButton.style.cursor = "pointer";
+      buttonArea.appendChild(importLibraryButton);
 
       // add button area to management area
       managementArea.appendChild(buttonArea);
@@ -244,6 +256,63 @@
           // remove image section
           imageSection.remove();
         }
+      });
+      // add event listener to export library button
+      exportLibraryButton.addEventListener("click", () => {
+        // create a new element
+        const element = document.createElement("a");
+        // set the href attribute to the JSON file
+        element.setAttribute(
+          "href",
+          "data:text/plain;charset=utf-8," +
+            encodeURIComponent(JSON.stringify(images[id]))
+        );
+        // set the download attribute to the file name
+        element.setAttribute("download", "imagebook.json");
+        // simulate click on element
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      });
+      // add event listener to import library button
+      importLibraryButton.addEventListener("click", () => {
+        // create a new element
+        const element = document.createElement("input");
+        // set the type attribute to file
+        element.setAttribute("type", "file");
+        // set the accept attribute to JSON files
+        element.setAttribute("accept", ".json");
+        // simulate click on element
+        element.style.display = "none";
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+        // add event listener to element
+        element.addEventListener("change", () => {
+          // create a new FileReader
+          const reader = new FileReader();
+          // add event listener to reader
+          reader.addEventListener("load", () => {
+            // parse JSON file
+            const importedImages = JSON.parse(reader.result);
+            // check if story exists in local storage
+            if (!images[id]) {
+              images[id] = {};
+            }
+            // go through importedImages object and add to images
+            for (const key in importedImages) {
+              images[id][key] = importedImages[key];
+            }
+            // update local storage
+            localStorage.setItem("imagebook", JSON.stringify(images));
+            // reload image section
+            imageSection.remove();
+            imageAdded = false;
+          });
+          // read file
+          reader.readAsText(element.files[0]);
+        });
       });
     }
 
@@ -265,6 +334,7 @@
         }
       });
     }
+
     // logic for image change
     if (oldLoreName !== loreName) {
       // check if '.loreImage' exists

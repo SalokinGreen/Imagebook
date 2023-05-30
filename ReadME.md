@@ -1,17 +1,38 @@
 Welcome to the imagebook, a [NovelAI](https://novelai.net/) tampermonkey extension that allows you to add images to your lorebook entries. Not the prettiest, but it works. It's the first version, so there might be unkown bugs!
 Tested on windows + brave browser greate so far.
 
-
-
 https://github.com/SalokinGreen/Imagebook/assets/50830205/df53043a-3868-41fd-9fe0-7dbb03a472e1
-
-
 
 ## Installation
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
 2. Install the script from this repository.
 3. Go to your lorebook and add images!
+
+### Mobile
+
+Follow the following guide to get the extension on your phone:
+
+- https://chrunos.com/tampermonkey-scripts-for-mobile/
+  _Works on android, not tested on IOS_
+
+## Features
+
+### Add images to your lorebook entries
+
+Put in the link to your image and it will be shown in that entry.
+
+### Delete Library
+
+Delete all images from your entries at once.
+
+### Export
+
+Export your images to a json file.
+
+### Import
+
+Import your images from a json file.
 
 ## Warning
 
