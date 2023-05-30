@@ -179,11 +179,28 @@
 
       // add save button
       const saveButton = document.createElement("button");
-      saveButton.innerText = "Change Image";
+      saveButton.innerText = "Change";
       saveButton.classList.add("save-button");
       saveButton.style.cursor = "pointer";
-      // titleSection.appendChild(saveButton);
-
+      saveButton.style.fontSize = "0.8rem";
+      saveButton.style.fontWeight = "bold";
+      saveButton.style.width = "5rem";
+      // hover efect
+      saveButton.addEventListener("mouseover", () => {
+        saveButton.style.backgroundColor = "green";
+      });
+      saveButton.addEventListener("mouseout", () => {
+        // remove styling
+        saveButton.style.backgroundColor = "";
+      });
+      // mobile styling
+      saveButton.addEventListener("touchstart", () => {
+        saveButton.style.backgroundColor = "green";
+      });
+      saveButton.addEventListener("touchend", () => {
+        // remove styling
+        saveButton.style.backgroundColor = "";
+      });
       // add event listener to save button
       saveButton.addEventListener("click", () => {
         const imageUrl = prompt("Enter image URL:");
@@ -219,12 +236,29 @@
       buttonArea.style.display = "flex";
       buttonArea.style.flexDirection = "row";
       buttonArea.style.gap = "1rem";
+      buttonArea.style.marginBottom = "0.5rem";
 
       // create delete library button
       const deleteLibraryButton = document.createElement("button");
-      deleteLibraryButton.innerText = "Delete Library";
+      deleteLibraryButton.innerText = "Delete";
       deleteLibraryButton.classList.add("delete-library-button");
       deleteLibraryButton.style.cursor = "pointer";
+      deleteLibraryButton.style.fontSize = "0.8rem";
+      deleteLibraryButton.style.fontWeight = "bold";
+      deleteLibraryButton.style.width = "5rem";
+      // hover effect
+      deleteLibraryButton.addEventListener("mouseover", () => {
+        deleteLibraryButton.style.backgroundColor = "red";
+      });
+      deleteLibraryButton.addEventListener("mouseout", () => {
+        deleteLibraryButton.style.backgroundColor = "";
+      });
+      deleteLibraryButton.addEventListener("touchstart", () => {
+        deleteLibraryButton.style.backgroundColor = "red";
+      });
+      deleteLibraryButton.addEventListener("touchend", () => {
+        deleteLibraryButton.style.backgroundColor = "";
+      });
       buttonArea.appendChild(saveButton);
       buttonArea.appendChild(deleteLibraryButton);
       // create export library button
@@ -232,12 +266,44 @@
       exportLibraryButton.innerText = "Export";
       exportLibraryButton.classList.add("export-library-button");
       exportLibraryButton.style.cursor = "pointer";
+      exportLibraryButton.style.fontSize = "0.8rem";
+      exportLibraryButton.style.fontWeight = "bold";
+      exportLibraryButton.style.width = "5rem";
+      // hover effect
+      exportLibraryButton.addEventListener("mouseover", () => {
+        exportLibraryButton.style.backgroundColor = "green";
+      });
+      exportLibraryButton.addEventListener("mouseout", () => {
+        exportLibraryButton.style.backgroundColor = "";
+      });
+      exportLibraryButton.addEventListener("touchstart", () => {
+        exportLibraryButton.style.backgroundColor = "green";
+      });
+      exportLibraryButton.addEventListener("touchend", () => {
+        exportLibraryButton.style.backgroundColor = "";
+      });
       buttonArea.appendChild(exportLibraryButton);
       // create import library button
       const importLibraryButton = document.createElement("button");
       importLibraryButton.innerText = "Import";
       importLibraryButton.classList.add("import-library-button");
       importLibraryButton.style.cursor = "pointer";
+      importLibraryButton.style.fontSize = "0.8rem";
+      importLibraryButton.style.fontWeight = "bold";
+      importLibraryButton.style.width = "5rem";
+      // hover effect
+      importLibraryButton.addEventListener("mouseover", () => {
+        importLibraryButton.style.backgroundColor = "green";
+      });
+      importLibraryButton.addEventListener("mouseout", () => {
+        importLibraryButton.style.backgroundColor = "";
+      });
+      importLibraryButton.addEventListener("touchstart", () => {
+        importLibraryButton.style.backgroundColor = "green";
+      });
+      importLibraryButton.addEventListener("touchend", () => {
+        importLibraryButton.style.backgroundColor = "";
+      });
       buttonArea.appendChild(importLibraryButton);
 
       // add button area to management area
