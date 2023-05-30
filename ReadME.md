@@ -47,8 +47,14 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 - Not enough testing to make sure there are no bugs.
 
 # Gallery
+## PC
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/3a1690ad-2e79-415a-b999-5db129196a65)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/a2d5540f-ad9a-468e-972c-2c6599744e42)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/aaa92ba0-a904-4abc-94f7-6f209d1eb18c)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/c458090d-ca44-4c98-abaf-318b1eee990e)
 
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/923a42a2-cec1-470e-857a-14d2020cf0fe)
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/a298fc84-9901-4ce6-89f0-6305cb7c36fd)
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/dfa669d9-b044-4f48-8a9e-7dd5f712fbed)
-![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ce3c5db6-ef6e-4074-9c15-bafbfcad5024)
+## Mobile
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/71613c47-ae26-40df-a291-f72b9ae1d8af)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ecbc341c-2812-44e0-8c3f-ac0b869185a1)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/f4affc33-ae82-427f-9bca-55143b1957e0)
+![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/353efbc2-cbc6-417f-9bd3-2343e9897b96)
