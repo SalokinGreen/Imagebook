@@ -18,13 +18,13 @@ Follow the following guide to get the extension on your phone:
 
 ## Features
 
-### Add images to your lorebook entries
+### Change
 
 Put in the link to your image and it will be shown in that entry.
 
-### Delete Library
+### Delete
 
-Delete all images from your entries at once.
+Delete all images from your lorebook at once.
 
 ### Export
 
@@ -47,13 +47,16 @@ This script is not affiliated with NovelAI in any way. Use at your own risk. I a
 - Not enough testing to make sure there are no bugs.
 
 # Gallery
+
 ## PC
+
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/3a1690ad-2e79-415a-b999-5db129196a65)
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/a2d5540f-ad9a-468e-972c-2c6599744e42)
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/aaa92ba0-a904-4abc-94f7-6f209d1eb18c)
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/c458090d-ca44-4c98-abaf-318b1eee990e)
 
 ## Mobile
+
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/71613c47-ae26-40df-a291-f72b9ae1d8af)
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/ecbc341c-2812-44e0-8c3f-ac0b869185a1)
 ![image](https://github.com/SalokinGreen/Imagebook/assets/50830205/f4affc33-ae82-427f-9bca-55143b1957e0)
