@@ -1,11 +1,7 @@
 Welcome to the imagebook, a [NovelAI](https://novelai.net/) tampermonkey extension that allows you to add images to your lorebook entries. Not the prettiest, but it works. It's the first version, so there might be unkown bugs!
 Tested on windows + brave browser greate so far.
 
-
-
 https://github.com/SalokinGreen/Imagebook/assets/50830205/07eb98bd-15e5-4d56-915e-bfde8f485087
-
-
 
 ## Installation
 
@@ -37,6 +33,12 @@ Export your images to a json file.
 ### Import
 
 Import your images from a json file.
+
+### ImgurExporter
+
+That's a different extension that allows you to export your images from an imgur post to a .imagebook file. The images will have the name of the image description, so name them the same as your lorebook entries to make it easier to import them.
+The images without description will be left out.
+![ImgurExporter Screenshot](image.png)
 
 ## Warning
 
